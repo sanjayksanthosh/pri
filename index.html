@@ -37,25 +37,26 @@
     }
 
     .card {
-      background: rgba(0, 0, 0, 0.6);
-      padding: 2rem 1rem;
+      background: rgba(0, 0, 0, 0.286);
+      padding: 2rem;
+      margin: 2rem 2rem;
       border: 4px solid #ff69b4;
       border-radius: 8px;
       box-shadow: 0 0 12px #ff69b4;
-      max-width: 90%;
-      width: 600px;
+      max-width: 600px;
+      width: 100%;
       z-index: 1;
       position: relative;
     }
 
     h1 {
       color: #ff69b4;
-      font-size: 1.2rem;
+      font-size: 1rem;
       margin-bottom: 1.5rem;
     }
 
     p {
-      font-size: 0.75rem;
+      font-size: 0.65rem;
       line-height: 1.6em;
       margin-top: 1rem;
       color: #ffffff;
@@ -64,7 +65,7 @@
     button {
       margin-top: 2rem;
       padding: 0.8rem 1rem;
-      font-size: 0.7rem;
+      font-size: 0.65rem;
       background-color: #ff1493;
       border: 2px solid #fff;
       color: white;
@@ -93,18 +94,32 @@
       line-height: 1.5;
     }
 
-    @media screen and (min-width: 600px) {
+    /* Mobile-specific adjustments */
+    @media screen and (max-width: 480px) {
+      .card {
+        padding: 1.2rem;
+        margin: 1rem 0.5rem;
+      }
+
       h1 {
-        font-size: 1.4rem;
+        font-size: 0.9rem;
       }
+
       p {
-        font-size: 0.85rem;
+        font-size: 0.6rem;
       }
-      button {
-        font-size: 0.8rem;
-      }
+
       #reason {
-        font-size: 0.75rem;
+        font-size: 0.55rem;
+      }
+
+      button {
+        font-size: 0.55rem;
+        padding: 0.6rem 0.8rem;
+      }
+
+      .pixel-heart {
+        font-size: 1.4rem;
       }
     }
   </style>
@@ -145,4 +160,3 @@
   </script>
 </body>
 </html>
-

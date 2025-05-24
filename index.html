@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Just for You</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('/pri/bg.gif') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Press Start 2P', cursive;
+      color: #ffcccb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+      z-index: 0;
+    }
+
+    .card {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 40px;
+      border: 4px solid #ff69b4;
+      border-radius: 8px;
+      box-shadow: 0 0 12px #ff69b4;
+      max-width: 700px;
+      width: 90%;
+      z-index: 1;
+      position: relative;
+    }
+
+    h1 {
+      color: #ff69b4;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.8em;
+      margin-top: 20px;
+      color: #fff;
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 10px 20px;
+      font-size: 14px;
+      background-color: #ff1493;
+      border: 2px solid #fff;
+      color: white;
+      cursor: pointer;
+      font-family: 'Press Start 2P', cursive;
+      text-transform: uppercase;
+      box-shadow: 2px 2px 0px #000;
+    }
+
+    button:hover {
+      background-color: #ff69b4;
+    }
+
+    .pixel-heart {
+      font-size: 32px;
+      margin-bottom: 10px;
+      color: #ff69b4;
+    }
+
+    #reason {
+      color: #00ffee;
+      font-size: 12px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+
+  <div class="card">
+    <div class="pixel-heart">💕</div>
+    <h1>Just So You Know...</h1>
+    <p>
+      I think about you more often than I check my phone (and that's saying a lot).<br>
+      You're not just the best part of my day — you're the best part of my *life*.<br>
+      I made this just to make you smile... and maybe tear up a little too. ❤️
+    </p>
+
+    <div id="reason">Click below to reveal my favorite things about you 💌</div>
+    <button onclick="nextReason()">NEXT REASON</button>
+
+    <!-- <p style="margin-top: 30px;">
+      Always yours,<br>
+      <strong>[Your Name]</strong>
+    </p> -->
+  </div>
+
+  <script>
+    const reasons = [
+      "You give the world's best hugs — scientifically proven 🧪",
+      "You laugh at my dumb jokes (or at least pretend to) 😆",
+      "You're like coffee: warm, addictive, and make my mornings better ☕",
+      "I love how you talk and complaint",
+      "You're the only person I'd share my fries with 🍟",
+      "You make chaos look beautiful 💫",
+      "Even when you’re grumpy, I want to kiss your face 😘",
+      "You're the human version of sunshine... but cuter 🌞",
+      "You make me feel safe, silly, and completely loved 💖"
+    ];
+    let current = 0;
+    function nextReason() {
+      document.getElementById("reason").textContent = reasons[current];
+      current = (current + 1) % reasons.length;
+    }
+  </script>
+</body>
+</html>

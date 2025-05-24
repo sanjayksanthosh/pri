@@ -6,6 +6,10 @@
   <title>Just for You</title>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       padding: 0;
@@ -16,51 +20,51 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
       text-align: center;
       position: relative;
-      overflow: hidden;
+      overflow-x: hidden;
     }
 
     .overlay {
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       height: 100%;
       width: 100%;
-      background: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+      background: rgba(0, 0, 0, 0.5);
       z-index: 0;
     }
 
     .card {
-      background: rgba(0, 0, 0, 0.8);
-      padding: 40px;
+      background: rgba(0, 0, 0, 0.85);
+      padding: 2rem 1rem;
       border: 4px solid #ff69b4;
       border-radius: 8px;
       box-shadow: 0 0 12px #ff69b4;
-      max-width: 700px;
-      width: 90%;
+      max-width: 90%;
+      width: 600px;
       z-index: 1;
       position: relative;
     }
 
     h1 {
       color: #ff69b4;
-      font-size: 20px;
-      margin-bottom: 20px;
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
     }
 
     p {
-      font-size: 14px;
-      line-height: 1.8em;
-      margin-top: 20px;
-      color: #fff;
+      font-size: 0.75rem;
+      line-height: 1.6em;
+      margin-top: 1rem;
+      color: #ffffff;
     }
 
     button {
-      margin-top: 30px;
-      padding: 10px 20px;
-      font-size: 14px;
+      margin-top: 2rem;
+      padding: 0.8rem 1rem;
+      font-size: 0.7rem;
       background-color: #ff1493;
       border: 2px solid #fff;
       color: white;
@@ -68,6 +72,8 @@
       font-family: 'Press Start 2P', cursive;
       text-transform: uppercase;
       box-shadow: 2px 2px 0px #000;
+      width: 90%;
+      max-width: 300px;
     }
 
     button:hover {
@@ -75,15 +81,31 @@
     }
 
     .pixel-heart {
-      font-size: 32px;
-      margin-bottom: 10px;
+      font-size: 2rem;
+      margin-bottom: 0.8rem;
       color: #ff69b4;
     }
 
     #reason {
       color: #00ffee;
-      font-size: 12px;
-      margin-top: 30px;
+      font-size: 0.65rem;
+      margin-top: 1.5rem;
+      line-height: 1.5;
+    }
+
+    @media screen and (min-width: 600px) {
+      h1 {
+        font-size: 1.4rem;
+      }
+      p {
+        font-size: 0.85rem;
+      }
+      button {
+        font-size: 0.8rem;
+      }
+      #reason {
+        font-size: 0.75rem;
+      }
     }
   </style>
 </head>
@@ -99,13 +121,8 @@
       I made this just to make you smile... and maybe tear up a little too. ❤️
     </p>
 
-    <div id="reason">Click below to reveal my favorite things about you 💌</div>
+    <div id="reason">Tap below to reveal my favorite things about you 💌</div>
     <button onclick="nextReason()">NEXT REASON</button>
-
-    <!-- <p style="margin-top: 30px;">
-      Always yours,<br>
-      <strong>[Your Name]</strong>
-    </p> -->
   </div>
 
   <script>
@@ -113,7 +130,7 @@
       "You give the world's best hugs — scientifically proven 🧪",
       "You laugh at my dumb jokes (or at least pretend to) 😆",
       "You're like coffee: warm, addictive, and make my mornings better ☕",
-      "I love how you talk and complaint",
+      "I love how you talk and complain — it's adorable 💬",
       "You're the only person I'd share my fries with 🍟",
       "You make chaos look beautiful 💫",
       "Even when you’re grumpy, I want to kiss your face 😘",
@@ -128,3 +145,4 @@
   </script>
 </body>
 </html>
+
